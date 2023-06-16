@@ -1,0 +1,204 @@
+body {
+  overflow: hidden;
+}
+.App {
+  display: flex;
+  height: 100vh;
+}
+.App-left {
+  user-select: none;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  background-color: #3C4852;
+}
+.App-left a:hover {
+  background-color: #313A42;
+}
+.App-left a, .upload, .download {
+  line-height: 40px;
+  padding-left: 20px;
+  color: rgb(162, 181, 185)
+}
+.App-left a i, .upload i, .download i {
+  margin-right: 10px;
+}
+.serverSelected {
+  height: 50px;
+  text-align: center;
+  width: 230px;
+  line-height: 50px;
+  background-color: #3C4852;
+}
+.serverSelected span {
+  font-size: 20px;
+  color: #fff;
+}
+
+.connectState {
+  background-color: #2E343C;
+  padding-left: 80px;
+  line-height: 30px;
+}
+.connectState span {
+  display: inline-block;
+  background-color: #00A65A;
+  height: 20px;
+  line-height: 20px;
+  width: 65px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.setting, .speed {
+  background-color: #2E343C;
+  color: #bdbdbd;
+  padding-left: 20px;
+  line-height: 30px;
+}
+.serverSelected ul {
+  padding: 10px 0 10px 0;
+  width: 190px;
+  position: absolute;
+  left: 25px;
+  top: 48px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+}
+.serverSelected ul li {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.serverSelected ul li:hover {
+  background-color: #E1E3E9;
+}
+
+
+.App-right {
+  flex-grow: 1;
+}
+.App-header {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  user-select: none;
+}
+.App-header div {
+  display: flex;
+  align-items: center;
+}
+.App-header .action {
+  line-height: 50px;
+  font-size: 16px;
+  height: 50px;
+  color: #CCCCCC;
+  vertical-align: middle;
+  min-width: 35px;
+}
+.App-header div div i {
+  line-height: 50px;
+}
+.App-header .hover {
+  color: #707070;
+}
+.App-header .hover:hover {
+  color: #0080FF;
+}
+
+.App-body {
+  height: 1000px;
+  overflow: auto;
+}
+.App-body ul {
+  padding: 0;
+}
+.App-body ul li {
+  list-style: none;
+}
+.App-body ul .task {
+  display: flex;
+  padding: 5px;
+  height: 57px;
+  background-color: #F9F9F9;
+  min-width: 700px;
+}
+.App-body ul .task div {
+  line-height: 47px;
+}
+.App-body ul .task:hover {
+  background-color: #F5F5F5;
+}
+.App-body .fileInfo div {
+  white-space: nowrap;
+}
+
+.App-body ul .server {
+  height: 40px;
+  padding: 0 15px 0 15px;
+  color: #AAAAAA;
+  width: 180px;
+  user-select: none;
+}
+.newTaskPage {
+  user-select: none;
+  color: #AAAAAA;
+}
+.App-body ul .checkedServer,
+.App-body ul .server:hover,
+.newTaskPage:hover,
+.checkedPage {
+  color: #208FE5;
+}
+.App-body ul .checkedServer::after {
+  content: '';
+  border: 1px solid;
+  width: 180px;
+  height: 0;
+  display: block;
+  margin-left: -15px;
+}
+.checkedPage:after {
+  content: '';
+  border: 1px solid;
+  width: 100%;
+  height: 0;
+  display: block;
+}
+.App-body ul .addButton {
+  color: #AAAAAA;
+  line-height: 40px;
+  padding-left: 8px;
+  padding-right: 8px
+}
+.App-body ul .addButton:hover {
+  color: #208FE5;
+}
+.App-body .hide {
+  display: none;
+}
+
+.taskInfo {
+  display: flex;
+  padding-left: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.taskInfo div:nth-child(1) {
+  width: 34%;
+  height: 38px;
+  line-height: 38px;
+}
+.taskInfo div:nth-child(2) {
+  width: 65%;
+  height: 38px;
+  line-height: 38px;
+}
+.taskInfo:nth-child(odd) {
+  background-color: #F9F9F9;
+}
+.taskInfo:hover {
+  background-color: #F5F5F5;
+}
